@@ -30,5 +30,9 @@ describe('Guerreros',function(){
         let guerrero=new Madera(new Metal(new Arquero));
         expect(guerrero.calcularDañoDeArma()).equal(20);
     });
+    it('Calcular el daño de arma para un arquero que tiene arco de madera, metal y fuego',function(){
+        let guerrero=new Madera(new Metal(new Fuego(new Arquero)));
+        expect(guerrero.calcularDañoDeArma()).equal(50);
+    });
 
 });
