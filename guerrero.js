@@ -1,7 +1,7 @@
 class Guerrero{
-constructor(nombre){
-    this.nombre=nombre;
-}
+    calcularDañoDeArma(){
+        
+    }
 }
 
 module.exports=Guerrero;
