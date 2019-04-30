@@ -2,10 +2,10 @@ class Infanteria{
     constructor(nombre){
         this.nombre=nombre;
         this.arma="espada";
-        this.totalDaño=10;
+        this.dañoTotal=10;
     }
     calcularDañoDeArma(){
-        return this.totalDaño;
+        return this.dañoTotal;
     }
 }
 

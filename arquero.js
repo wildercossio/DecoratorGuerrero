@@ -2,10 +2,10 @@ class Arquero{
     constructor(nombre){
         this.nombre=nombre;
         this.arma="arco";
-        this.totalDaño=5;
+        this.dañoTotal=5;
     }
     calcularDañoDeArma(){
-        return this.totalDaño;
+        return this.dañoTotal;
     }
 }
 

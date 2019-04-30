@@ -1,22 +1,31 @@
 import Arquero from '../arquero';
 import Infanteria from '../infanteria';
+import Madera from '../madera';
+import Metal from '../metal';
+import Fuego from '../fuego';
 var expect = require('chai').expect;
 
 describe('Guerreros',function(){
-    it('Devolver el nombre de un guerrero de tipo arquero',function(){
+    it('Devolver el nombre de un arquero',function(){
         let guerrero=new Arquero("Juan");
-        expect("Juan").equal(guerrero.nombre);
+        expect(guerrero.nombre).equal("Juan");
     });
-    it('Devolver el nombre de un guerrero de tipo infanteria',function(){
+    it('Devolver el nombre de un infanteria',function(){
         let guerrero=new Infanteria("Erick");
-        expect("Erick").equal(guerrero.nombre);
+        expect(guerrero.nombre).equal("Erick");
     });
-    it('Calcular el daño de arma para un guerrero de tipo arquero que tiene solo arco',function(){
+    it('Calcular el daño de arma para un arquero que solo tiene arco',function(){
         let guerrero=new Arquero("Homero");
-        expect(5).equal(guerrero.calcularDañoDeArma());
+        expect(guerrero.calcularDañoDeArma()).equal(5);
     });
-    it('Calcular el daño de arma para un guerrero de tipo infanteria que tiene solo espada',function(){
+    it('Calcular el daño de arma para un infanteria que solo tiene espada',function(){
         let guerrero=new Infanteria("Waka");
-        expect(10).equal(guerrero.calcularDañoDeArma()); 
+        expect(guerrero.calcularDañoDeArma()).equal(10); 
     });
+    it('Calcular el daño de arma para un arquero que tiene arco de madera',function(){
+        let guerrero=new Madera(new Arquero());
+        expect(guerrero.calcularDañoDeArma()).equal(10);
+    });
+    
+
 });
