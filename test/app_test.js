@@ -35,4 +35,8 @@ describe('Guerreros',function(){
         expect(guerrero.calcularDañoDeArma()).equal(50);
     });
 
+    it('Calcular el daño de arma para un infanteria que tiene espada de madera',function(){
+        let guerrero=new Madera(new Infanteria());
+        expect(guerrero.calcularDañoDeArma()).equal(15);
+    });
 });
